@@ -57,9 +57,9 @@ function sampleShape(sh){
 }
 const FONT = '"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif';
 const SHAPES = [
-  { key:'L',     w:240, h:240, wide:.36, draw:(c,w,h)=>{ c.font=`900 230px ${FONT}`; c.fillText('L',w/2,h/2+8); } },
+  { key:'SL',    w:400, h:240, wide:.5,  draw:(c,w,h)=>{ c.font=`900 230px ${FONT}`; c.fillText('SL',w/2,h/2+8); } },
   { key:'LIONS', w:620, h:170, wide:.8,  draw:(c,w,h)=>{ c.font=`900 150px ${FONT}`; c.fillText('LIONS',w/2,h/2+6); } },
-  { key:'삼성',  w:420, h:200, wide:.62, draw:(c,w,h)=>{ c.font=`900 170px ${FONT}`; c.fillText('삼성',w/2,h/2+6); } },
+  { key:'최강삼성', w:700, h:200, wide:.86, draw:(c,w,h)=>{ c.font=`900 165px ${FONT}`; c.fillText('최강삼성',w/2,h/2+6); } },
   { key:'lion',  w:260, h:260, wide:.4, step:3, draw:(c,w,h)=>{ c.font='210px sans-serif'; c.fillText('🦁',w/2,h/2+10); } },
   { key:'star',  w:240, h:240, wide:.34, draw:(c,w,h)=>{ c.font='200px sans-serif'; c.fillText('⭐',w/2,h/2+8); } },
 ];
