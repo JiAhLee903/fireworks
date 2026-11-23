@@ -15,9 +15,11 @@
 </head>
 <body>
 <canvas id="c"></canvas>
+<pre id="err" style="position:fixed;left:8px;right:8px;top:50px;color:#ff8;font:11px monospace;white-space:pre-wrap;pointer-events:none;margin:0"></pre>
 <button id="finale">🎆 피날레!</button>
 <div id="hint">화면을 터치/클릭하면 폭죽이 터져요 🦁💙</div>
 <script>
+window.onerror=(m,u,l,c)=>{document.getElementById("err").textContent+="오류: "+m+" (줄 "+l+")\n"};
 const cv = document.getElementById('c'), ctx = cv.getContext('2d');
 let W, H, dpr;
 function resize(){
