@@ -70,13 +70,13 @@ const SH = {
   friend: text('우리 우정','우리 우정',640,200,.88,165),
   forever:text('영원하자','영원하자',640,200,.88,165),
   love:   text('사랑해','사랑해',520,200,.78,170),
-  heart:  { key:'heart', w:260, h:240, wide:.5, step:3, draw:(c,w,h)=>{
+  heart:  { key:'heart', w:260, h:260, wide:.5, step:3, draw:(c,w,h)=>{
     c.beginPath();
     for(let t=0;t<=Math.PI*2;t+=.02){
       const x=16*Math.sin(t)**3, y=-(13*Math.cos(t)-5*Math.cos(2*t)-2*Math.cos(3*t)-Math.cos(4*t));
-      const px=w/2+x*7, py=h/2+y*7+8; t?c.lineTo(px,py):c.moveTo(px,py);
+      const px=w/2+x*7, py=h/2+(y-2.5)*7; t?c.lineTo(px,py):c.moveTo(px,py);
     } c.closePath(); c.fill(); } },
-  emoji:  { key:'emoji', w:260, h:260, wide:.42, step:3, draw:(c,w,h)=>{ c.font='210px sans-serif'; c.fillText('💗',w/2,h/2+10); } },
+  emoji:  { key:'emoji', w:260, h:260, wide:.42, step:3, draw:(c,w,h)=>{ c.font='170px sans-serif'; c.fillText('💗',w/2,h/2+8); } },
 };
 const RANDOM_SHAPES = [SH.mini, SH.friend, SH.forever, SH.love, SH.heart, SH.heart, SH.emoji];
 
