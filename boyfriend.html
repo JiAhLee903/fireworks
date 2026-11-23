@@ -78,7 +78,7 @@ const SH = {
     } c.closePath(); c.fill(); } },
   emoji:  { key:'emoji', w:260, h:260, wide:.42, step:3, draw:(c,w,h)=>{ c.font='210px sans-serif'; c.fillText('💗',w/2,h/2+10); } },
 };
-const RANDOM_SHAPES = [SH.mini, SH.friend, SH.forever, SH.love, SH.heart, SH.heart, SH.emoji];
+const RANDOM_SHAPES = [SH.heart, SH.heart, SH.emoji];   // 스토리 이후엔 하트만
 
 // ---- 입자 ----
 function spark(x,y,vx,vy,o={}){
